@@ -22,8 +22,10 @@
     "node-restful": "^0.2.5",
     "pm2": "^2.1.5"
   },
-  "devDependencies": {
-    "express-list-routes": "^0.1.4",
+  "devDependencies": {   
     "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=6.11.1"
   }
 }

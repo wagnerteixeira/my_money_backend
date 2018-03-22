@@ -1,6 +1,4 @@
-os = require('os')
-const host = 'localhost'// os.hostname()
-const port = 3003
+const port = 80
 
 const bodyParser = require('body-parser')
 const express = require('express')
@@ -13,8 +11,8 @@ server.use(bodyParser.json())
 server.use(allowCors)
 server.use(queryParser())
 
-server.listen(port, host, () => {
-    console.log(`BAKEND is running on http://${host}:${port}`)    
+server.listen(process.env.PORT || port, () => {
+    console.log(`BAKEND is running on port ${port}`)    
     //console.log(app._router.stack)
 })
 
